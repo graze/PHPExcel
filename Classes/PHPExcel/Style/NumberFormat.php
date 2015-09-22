@@ -65,6 +65,8 @@ class PHPExcel_Style_NumberFormat extends PHPExcel_Style_Supervisor implements P
 
     const FORMAT_CURRENCY_USD_SIMPLE     = '"$"#,##0.00_-';
     const FORMAT_CURRENCY_USD            = '$#,##0_-';
+    const FORMAT_CURRENCY_USD_COMPLEX    = '_-[$$-409]* #,##0.00_ ;_-[$$-409]* -#,##0.00 ;_-[$$-409]* "-"??_ ;_-@_ ';
+    const FORMAT_CURRENCY_GBP_COMPLEX    = '_-£* #,##0.00_ ;_-£* -#,##0.00 ;_-£* "-"??_ ;_-@_ ';
     const FORMAT_CURRENCY_EUR_SIMPLE     = '[$EUR ]#,##0.00_-';
 
     /**
@@ -264,7 +266,7 @@ class PHPExcel_Style_NumberFormat extends PHPExcel_Style_Supervisor implements P
         //      40: "#,##0.00_);[Red](#,##0.00)"
         //      47: "mm:ss.0"
         //      KOR fmt 55: "yyyy/mm/dd"
- 
+
         // Built-in format codes
         if (is_null(self::$builtInFormats)) {
             self::$builtInFormats = array();
